@@ -256,14 +256,17 @@ video.play();
 
 }
 
-/* CAMBIO AUTOMATICO DE VIDEO CADA LUNES */
+/* CAMBIO AUTOMATICO DE VIDEO CADA MARTES */
 
-const inicio = new Date("2026-03-30");
+const inicio = new Date("2026-03-31");
+inicio.setHours(0,0,0,0);
+
 const hoy = new Date();
+hoy.setHours(0,0,0,0);
 
 const diferencia = hoy - inicio;
 
-const semana = Math.floor(diferencia / (1000*60*60*24*7));
+const semana = Math.floor(diferencia / (1000 * 60 * 60 * 24 * 7));
 
 const lista = [
 {video:"RT1.mp4", img:"RT1.png", titulo:"BANDOLA DE SEGURIDAD"},
